@@ -14,7 +14,7 @@ xhr.open('GET', `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey
 
 
 xhr.onload = function () {
-    if (this.status === 200) {
+    if (this.status === 426) {
         let json = JSON.parse(this.responseText);
         let articles = json.articles;
         console.log(json);
